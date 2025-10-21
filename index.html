@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentic AI with Cline - Seminar Resources</title>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-dark: #121212;
+      --color-mid: #1f1f1f;
+      --color-light: #e0e0e0;
+      --color-accent-blue: #00e0ff;
+      --color-accent-purple: #9d4edd;
+      --font-mono: 'Chivo Mono', monospace;
+      --font-sans: 'Inter', sans-serif;
+      --border-radius: 10px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-light);
+      background-color: var(--color-dark);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      background-color: var(--color-mid);
+      padding: 50px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-purple));
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-family: var(--font-mono);
+      color: var(--color-accent-blue);
+      font-size: 2.8em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(0, 224, 255, 0.4);
+    }
+
+    h2 {
+      font-family: var(--font-sans);
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 1.2em;
+      font-weight: 400;
+      margin-top: 5px;
+    }
+
+    .speaker-badge {
+      background-color: var(--color-accent-purple);
+      color: var(--color-dark);
+      font-family: var(--font-mono);
+      padding: 8px 15px;
+      border-radius: 50px;
+      font-size: 0.8em;
+      font-weight: 700;
+      margin-top: 15px;
+      display: inline-block;
+      box-shadow: 0 0 10px rgba(157, 77, 237, 0.7);
+    }
+
+    .profile-section {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 50px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: var(--border-radius);
+      border-left: 5px solid var(--color-accent-purple);
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--color-accent-blue);
+      box-shadow: 0 0 15px rgba(157, 77, 237, 0.5);
+      background-color: var(--color-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7em;
+      color: var(--color-accent-blue);
+      text-align: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      transition: all 0.3s;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px var(--color-accent-blue);
+    }
+
+    h3 {
+      font-family: var(--font-mono);
+      color: var(--color-accent-blue);
+      font-size: 1.6em;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    p strong {
+      color: var(--color-accent-purple);
+    }
+
+    .outline-section {
+      margin-bottom: 50px;
+    }
+
+    .outline-section h3 {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .outline-section ul {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .outline-section li {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px;
+      border-radius: var(--border-radius);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    .outline-section li:hover {
+      background: rgba(0, 224, 255, 0.08);
+      border-color: var(--color-accent-blue);
+    }
+
+    .outline-section li strong {
+      color: var(--color-accent-blue);
+      display: block;
+      margin-bottom: 5px;
+      font-family: var(--font-mono);
+    }
+
+    /* Beautiful Last Sections */
+    .utility-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding-top: 30px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.2);
+      gap: 20px;
+    }
+
+    .utility-block {
+      flex: 1;
+      min-width: 250px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: var(--border-radius);
+      padding: 25px;
+      text-align: center;
+      transition: 0.3s;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .utility-block:hover {
+      box-shadow: 0 0 20px rgba(0, 224, 255, 0.3);
+      transform: scale(1.02);
+    }
+
+    .utility-block p {
+      font-family: var(--font-mono);
+      color: var(--color-accent-purple);
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .utility-block a {
+      display: inline-block;
+      margin: 8px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .download a {
+      background-color: var(--color-accent-blue);
+      color: var(--color-dark);
+      box-shadow: 0 0 15px var(--color-accent-blue);
+    }
+
+    .download a:hover {
+      background-color: var(--color-accent-purple);
+      color: #fff;
+    }
+
+    .social a {
+      color: var(--color-accent-purple);
+      border: 1px solid var(--color-accent-purple);
+    }
+
+    .social a:hover {
+      background-color: var(--color-accent-purple);
+      color: #fff;
+      box-shadow: 0 0 20px var(--color-accent-purple);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      font-size: 0.8em;
+      color: rgba(255, 255, 255, 0.3);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-family: var(--font-mono);
+    }
+
+    @media (max-width: 768px) {
+      .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+      .outline-section ul {
+        grid-template-columns: 1fr;
+      }
+      .utility-section {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>// AGENTIC AI WITH CLINE</h1>
+      <h2>Multi-File AI Collaboration in Visual Studio Code</h2>
+      <div class="speaker-badge">SPEAKER: [Your Name]</div>
+    </header>
+
+    <div class="profile-section">
+      <img src="images/danish.jpg" alt="Speaker Photo" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+        
+      </div>
+      <div>
+        <h3>Introduction</h3>
+        <p><strong>Agentic AI</strong> represents the next step in automation — systems that can plan, reason, and execute tasks on their own. <strong>Cline</strong> integrates these capabilities directly inside <strong>VS Code</strong>, allowing developers to build, refactor, and test code using AI-driven collaboration.</p>
+      </div>
+    </div>
+
+    <div class="outline-section">
+      <h3>:: Installation & Workflow ::</h3>
+      <ul>
+        <li><strong>1. Install Cline:</strong> In VS Code → Extensions → Search “Cline” → Install.</li>
+        <li><strong>2. Connect an AI Model:</strong> Link GPT or Claude using your API key.</li>
+        <li><strong>3. Start Workflow:</strong> Chat with Cline, describe your coding task, review changes, and approve them.</li>
+        <li><strong>4. Automation:</strong> Generate tests, refactor code, and add docs with one command.</li>
+      </ul>
+    </div>
+
+    <div class="outline-section">
+      <h3>:: Modes & API Integration ::</h3>
+      <ul>
+        <li><strong>Plan Mode:</strong> Cline explains its actions before making any code change.</li>
+        <li><strong>Act Mode:</strong> Automatically performs tasks like editing or creating files.</li>
+        <li><strong>API Setup:</strong> Works securely with APIs such as OpenAI, Anthropic, and OpenRouter for model access.</li>
+      </ul>
+    </div>
+
+    <div class="outline-section">
+      <h3>:: Summary ::</h3>
+      <p><strong>Cline</strong> transforms Visual Studio Code into a truly intelligent development partner. It enables developers to collaborate with AI that understands entire projects, improving speed, precision, and creativity.  
+      <br><br>With Agentic AI, programming becomes a shared process between human and machine — smarter, faster, and future-ready.</p>
+    </div>
+
+    <div class="utility-section">
+      <div class="utility-block download">
+        <p>// DOWNLOAD_RESOURCES</p>
+        <a href="docs/Agentic AI.docx">Seminar Slides (PDF)</a>
+        <a href="#">Demo Files (ZIP)</a>
+      </div>
+      <div class="utility-block social">
+        <p>// CONNECT_PROFILE</p>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+
+    <footer>
+      TERMINAL_OUTPUT: SESSION_COMPLETE. © 2025 [Your Name] — ALLAH HAFIZ ⚔
+    </footer>
+  </div>
+</body>
+</html>
