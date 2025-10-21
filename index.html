@@ -31,8 +31,8 @@
       line-height: 1.6;
       min-height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: flex-start;
       padding: 40px 20px;
     }
 
@@ -40,7 +40,7 @@
       max-width: 1000px;
       width: 100%;
       background-color: var(--color-mid);
-      padding: 50px;
+      padding: 40px 30px;
       border-radius: var(--border-radius);
       box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -59,22 +59,22 @@
       border-radius: var(--border-radius) var(--border-radius) 0 0;
     }
 
+    /* HEADER */
     header {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     h1 {
       font-family: var(--font-mono);
       color: var(--color-accent-blue);
-      font-size: 2.8em;
+      font-size: 2.5em;
       text-transform: uppercase;
       letter-spacing: 2px;
       text-shadow: 0 0 10px rgba(0, 224, 255, 0.4);
     }
 
     h2 {
-      font-family: var(--font-sans);
       color: rgba(255, 255, 255, 0.5);
       font-size: 1.2em;
       font-weight: 400;
@@ -94,6 +94,7 @@
       box-shadow: 0 0 10px rgba(157, 77, 237, 0.7);
     }
 
+    /* PROFILE SECTION */
     .profile-section {
       display: flex;
       align-items: center;
@@ -112,14 +113,6 @@
       object-fit: cover;
       border: 3px solid var(--color-accent-blue);
       box-shadow: 0 0 15px rgba(157, 77, 237, 0.5);
-      background-color: var(--color-dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.7em;
-      color: var(--color-accent-blue);
-      text-align: center;
-      overflow: hidden;
       flex-shrink: 0;
       transition: all 0.3s;
     }
@@ -129,7 +122,7 @@
       box-shadow: 0 0 25px var(--color-accent-blue);
     }
 
-    h3 {
+    .profile-text h3 {
       font-family: var(--font-mono);
       color: var(--color-accent-blue);
       font-size: 1.6em;
@@ -137,18 +130,23 @@
       letter-spacing: 1px;
     }
 
-    p strong {
+    .profile-text p strong {
       color: var(--color-accent-purple);
     }
 
+    /* OUTLINE SECTIONS */
     .outline-section {
       margin-bottom: 50px;
     }
 
     .outline-section h3 {
+      font-family: var(--font-mono);
+      color: var(--color-accent-blue);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       padding-bottom: 10px;
       margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .outline-section ul {
@@ -179,7 +177,7 @@
       font-family: var(--font-mono);
     }
 
-    /* Beautiful Last Sections */
+    /* UTILITY SECTION */
     .utility-section {
       display: flex;
       justify-content: space-between;
@@ -256,7 +254,11 @@
       font-family: var(--font-mono);
     }
 
+    /* 📱 RESPONSIVE DESIGN */
     @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
       .profile-section {
         flex-direction: column;
         text-align: center;
@@ -268,29 +270,37 @@
       .utility-section {
         flex-direction: column;
       }
+      h1 {
+        font-size: 2em;
+      }
     }
   </style>
 </head>
 <body>
 
   <div class="container">
+    <!-- HEADER -->
     <header>
-      <h1>// AGENTIC AI WITH CLINE</h1>
+      <h1>AGENTIC AI WITH CLINE</h1>
       <h2>Multi-File AI Collaboration in Visual Studio Code</h2>
-      <div class="speaker-badge">SPEAKER: [Your Name]</div>
+      <div class="speaker-badge">SPEAKER: MUHAMMED DANISH</div>
     </header>
 
-    <div class="profile-section">
-      <img src="images/danish.jpg" alt="Speaker Photo" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
-        
-      </div>
-      <div>
+    <!-- PROFILE SECTION -->
+    <section class="profile-section">
+      <img src="images/danish.jpg" alt="Speaker Photo" class="profile-pic">
+      <div class="profile-text">
         <h3>Introduction</h3>
-        <p><strong>Agentic AI</strong> represents the next step in automation — systems that can plan, reason, and execute tasks on their own. <strong>Cline</strong> integrates these capabilities directly inside <strong>VS Code</strong>, allowing developers to build, refactor, and test code using AI-driven collaboration.</p>
+        <p>
+          <strong>Agentic AI</strong> represents the next step in automation — systems that can plan, reason, and execute tasks on their own.
+          <strong>Cline</strong> integrates these capabilities directly inside <strong>VS Code</strong>, allowing developers to build, refactor, 
+          and test code using AI-driven collaboration.
+        </p>
       </div>
-    </div>
+    </section>
 
-    <div class="outline-section">
+    <!-- INSTALLATION SECTION -->
+    <section class="outline-section">
       <h3>:: Installation & Workflow ::</h3>
       <ul>
         <li><strong>1. Install Cline:</strong> In VS Code → Extensions → Search “Cline” → Install.</li>
@@ -298,39 +308,47 @@
         <li><strong>3. Start Workflow:</strong> Chat with Cline, describe your coding task, review changes, and approve them.</li>
         <li><strong>4. Automation:</strong> Generate tests, refactor code, and add docs with one command.</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="outline-section">
+    <!-- MODES SECTION -->
+    <section class="outline-section">
       <h3>:: Modes & API Integration ::</h3>
       <ul>
         <li><strong>Plan Mode:</strong> Cline explains its actions before making any code change.</li>
         <li><strong>Act Mode:</strong> Automatically performs tasks like editing or creating files.</li>
         <li><strong>API Setup:</strong> Works securely with APIs such as OpenAI, Anthropic, and OpenRouter for model access.</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="outline-section">
+    <!-- SUMMARY -->
+    <section class="outline-section">
       <h3>:: Summary ::</h3>
-      <p><strong>Cline</strong> transforms Visual Studio Code into a truly intelligent development partner. It enables developers to collaborate with AI that understands entire projects, improving speed, precision, and creativity.  
-      <br><br>With Agentic AI, programming becomes a shared process between human and machine — smarter, faster, and future-ready.</p>
-    </div>
+      <p>
+        <strong>Cline</strong> transforms Visual Studio Code into a truly intelligent development partner.
+        It enables developers to collaborate with AI that understands entire projects, improving speed, precision, and creativity.  
+        <br><br>With Agentic AI, programming becomes a shared process between human and machine — smarter, faster, and future-ready.
+      </p>
+    </section>
 
-    <div class="utility-section">
+    <!-- UTILITY SECTION -->
+    <section class="utility-section">
       <div class="utility-block download">
         <p>// DOWNLOAD_RESOURCES</p>
         <a href="docs/Agentic AI.docx">Seminar Slides (PDF)</a>
         <a href="#">Demo Files (ZIP)</a>
       </div>
+
       <div class="utility-block social">
         <p>// CONNECT_PROFILE</p>
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
-        <a href="#">Twitter</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/danishcorder" target="_blank">GitHub</a>
+        <a href="https://twitter.com/" target="_blank">Twitter</a>
       </div>
-    </div>
+    </section>
 
+    <!-- FOOTER -->
     <footer>
-      TERMINAL_OUTPUT: SESSION_COMPLETE. © 2025 [Your Name] — ALLAH HAFIZ ⚔
+      TERMINAL_OUTPUT: SESSION_COMPLETE. © 2025 MUHAMMED DANISH — ALLAH HAFIZ ⚔
     </footer>
   </div>
 </body>
