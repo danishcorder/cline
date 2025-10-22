@@ -29,20 +29,16 @@
       color: var(--color-light);
       background-color: var(--color-dark);
       line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px 20px;
+      padding: 20px;
     }
 
     .container {
       max-width: 1000px;
-      width: 100%;
+      margin: auto;
       background-color: var(--color-mid);
-      padding: 40px 30px;
+      padding: 40px;
       border-radius: var(--border-radius);
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
       border: 1px solid rgba(255, 255, 255, 0.08);
       position: relative;
       overflow: hidden;
@@ -59,26 +55,25 @@
       border-radius: var(--border-radius) var(--border-radius) 0 0;
     }
 
-    /* HEADER */
     header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     h1 {
       font-family: var(--font-mono);
       color: var(--color-accent-blue);
-      font-size: 2.5em;
+      font-size: 2.4em;
       text-transform: uppercase;
       letter-spacing: 2px;
       text-shadow: 0 0 10px rgba(0, 224, 255, 0.4);
     }
 
     h2 {
-      color: rgba(255, 255, 255, 0.5);
-      font-size: 1.2em;
+      font-size: 1.1em;
+      color: rgba(255, 255, 255, 0.6);
       font-weight: 400;
-      margin-top: 5px;
+      margin-top: 8px;
     }
 
     .speaker-badge {
@@ -88,72 +83,64 @@
       padding: 8px 15px;
       border-radius: 50px;
       font-size: 0.8em;
-      font-weight: 700;
-      margin-top: 15px;
+      margin-top: 12px;
       display: inline-block;
       box-shadow: 0 0 10px rgba(157, 77, 237, 0.7);
     }
 
-    /* PROFILE SECTION */
     .profile-section {
       display: flex;
       align-items: center;
-      gap: 40px;
-      margin-bottom: 50px;
-      padding: 30px;
+      gap: 30px;
+      margin-bottom: 40px;
+      padding: 25px;
       background: rgba(255, 255, 255, 0.03);
       border-radius: var(--border-radius);
       border-left: 5px solid var(--color-accent-purple);
+      flex-wrap: wrap;
     }
 
-    .profile-pic {
+    .profile-section img {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid var(--color-accent-blue);
-      box-shadow: 0 0 15px rgba(157, 77, 237, 0.5);
+      box-shadow: 0 0 10px rgba(157, 77, 237, 0.4);
       flex-shrink: 0;
-      transition: all 0.3s;
+      transition: 0.3s;
     }
 
-    .profile-pic:hover {
+    .profile-section img:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 25px var(--color-accent-blue);
     }
 
-    .profile-text h3 {
+    h3 {
       font-family: var(--font-mono);
       color: var(--color-accent-blue);
-      font-size: 1.6em;
+      font-size: 1.5em;
       margin-bottom: 10px;
       letter-spacing: 1px;
     }
 
-    .profile-text p strong {
+    p strong {
       color: var(--color-accent-purple);
     }
 
-    /* OUTLINE SECTIONS */
     .outline-section {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
     .outline-section h3 {
-      font-family: var(--font-mono);
-      color: var(--color-accent-blue);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       padding-bottom: 10px;
       margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
     }
 
     .outline-section ul {
       list-style: none;
-      padding-left: 0;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
     }
 
@@ -162,7 +149,7 @@
       padding: 15px;
       border-radius: var(--border-radius);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: background 0.3s, border-color 0.3s;
+      transition: 0.3s;
     }
 
     .outline-section li:hover {
@@ -170,22 +157,13 @@
       border-color: var(--color-accent-blue);
     }
 
-    .outline-section li strong {
-      color: var(--color-accent-blue);
-      display: block;
-      margin-bottom: 5px;
-      font-family: var(--font-mono);
-    }
-
-    /* UTILITY SECTION */
     .utility-section {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
       flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
       padding-top: 30px;
       border-top: 1px dashed rgba(255, 255, 255, 0.2);
-      gap: 20px;
     }
 
     .utility-block {
@@ -195,13 +173,13 @@
       border-radius: var(--border-radius);
       padding: 25px;
       text-align: center;
-      transition: 0.3s;
       border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: 0.3s;
     }
 
     .utility-block:hover {
-      box-shadow: 0 0 20px rgba(0, 224, 255, 0.3);
-      transform: scale(1.02);
+      box-shadow: 0 0 15px rgba(0, 224, 255, 0.3);
+      transform: scale(1.03);
     }
 
     .utility-block p {
@@ -254,24 +232,33 @@
       font-family: var(--font-mono);
     }
 
-    /* 📱 RESPONSIVE DESIGN */
-    @media (max-width: 768px) {
-      body {
-        padding: 20px 10px;
+    /* ✅ MOBILE OPTIMIZATION */
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
       }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
       .profile-section {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
+        padding: 20px;
       }
+
+      .profile-section img {
+        width: 100px;
+        height: 100px;
+      }
+
       .outline-section ul {
         grid-template-columns: 1fr;
       }
+
       .utility-section {
         flex-direction: column;
-      }
-      h1 {
-        font-size: 2em;
       }
     }
   </style>
@@ -279,28 +266,21 @@
 <body>
 
   <div class="container">
-    <!-- HEADER -->
     <header>
       <h1>AGENTIC AI WITH CLINE</h1>
       <h2>Multi-File AI Collaboration in Visual Studio Code</h2>
-      <div class="speaker-badge">SPEAKER: MUHAMMAD DANISH</div>
+      <div class="speaker-badge">SPEAKER: Muhammad Danish</div>
     </header>
 
-    <!-- PROFILE SECTION -->
-    <section class="profile-section">
-      <img src="images/danish.jpg" alt="Speaker Photo" class="profile-pic">
-      <div class="profile-text">
+    <div class="profile-section">
+      <img src="images/danish.jpg" alt="Speaker Photo">
+      <div>
         <h3>Introduction</h3>
-        <p>
-          <strong>Agentic AI</strong> represents the next step in automation — systems that can plan, reason, and execute tasks on their own.
-          <strong>Cline</strong> integrates these capabilities directly inside <strong>VS Code</strong>, allowing developers to build, refactor, 
-          and test code using AI-driven collaboration.
-        </p>
+        <p><strong>Agentic AI</strong> represents the next step in automation — systems that can plan, reason, and execute tasks on their own. <strong>Cline</strong> integrates these capabilities directly inside <strong>VS Code</strong>, allowing developers to build, refactor, and test code using AI-driven collaboration.</p>
       </div>
-    </section>
+    </div>
 
-    <!-- INSTALLATION SECTION -->
-    <section class="outline-section">
+    <div class="outline-section">
       <h3>:: Installation & Workflow ::</h3>
       <ul>
         <li><strong>1. Install Cline:</strong> In VS Code → Extensions → Search “Cline” → Install.</li>
@@ -308,48 +288,40 @@
         <li><strong>3. Start Workflow:</strong> Chat with Cline, describe your coding task, review changes, and approve them.</li>
         <li><strong>4. Automation:</strong> Generate tests, refactor code, and add docs with one command.</li>
       </ul>
-    </section>
+    </div>
 
-    <!-- MODES SECTION -->
-    <section class="outline-section">
+    <div class="outline-section">
       <h3>:: Modes & API Integration ::</h3>
       <ul>
         <li><strong>Plan Mode:</strong> Cline explains its actions before making any code change.</li>
         <li><strong>Act Mode:</strong> Automatically performs tasks like editing or creating files.</li>
         <li><strong>API Setup:</strong> Works securely with APIs such as OpenAI, Anthropic, and OpenRouter for model access.</li>
       </ul>
-    </section>
+    </div>
 
-    <!-- SUMMARY -->
-    <section class="outline-section">
+    <div class="outline-section">
       <h3>:: Summary ::</h3>
-      <p>
-        <strong>Cline</strong> transforms Visual Studio Code into a truly intelligent development partner.
-        It enables developers to collaborate with AI that understands entire projects, improving speed, precision, and creativity.  
-        <br><br>With Agentic AI, programming becomes a shared process between human and machine — smarter, faster, and future-ready.
-      </p>
-    </section>
+      <p><strong>Cline</strong> transforms Visual Studio Code into a truly intelligent development partner. It enables developers to collaborate with AI that understands entire projects, improving speed, precision, and creativity.<br><br>With Agentic AI, programming becomes a shared process between human and machine — smarter, faster, and future-ready.</p>
+    </div>
 
-    <!-- UTILITY SECTION -->
-    <section class="utility-section">
+    <div class="utility-section">
       <div class="utility-block download">
-        <p>// DOWNLOAD_RESOURCES</p>
+        <p>DOWNLOAD_RESOURCES</p>
         <a href="docs/Agentic AI.docx">Seminar Slides (PDF)</a>
         <a href="#">Demo Files (ZIP)</a>
       </div>
-
       <div class="utility-block social">
-        <p>// CONNECT_PROFILE</p>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-        <a href="https://github.com/danishcorder" target="_blank">GitHub</a>
-        <a href="https://twitter.com/" target="_blank">Twitter</a>
+        <p>CONNECT_PROFILE</p>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Twitter</a>
       </div>
-    </section>
+    </div>
 
-    <!-- FOOTER -->
     <footer>
-      TERMINAL_OUTPUT: SESSION_COMPLETE. © 2025 MUHAMMAD DANISH 
+      TERMINAL_OUTPUT: SESSION_COMPLETE. © 2025 Muhammad Danish — ALLAH HAFIZ ⚔
     </footer>
   </div>
+
 </body>
 </html>
