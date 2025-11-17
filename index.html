@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agentic AI with Cline  Seminar Resources</title>
+  <title>Agentic AI with Cline Seminar Resources</title>
   <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -76,18 +76,6 @@
       margin-top: 8px;
     }
 
-    .speaker-badge {
-      background-color: var(--color-accent-purple);
-      color: var(--color-dark);
-      font-family: var(--font-mono);
-      padding: 8px 15px;
-      border-radius: 50px;
-      font-size: 0.8em;
-      margin-top: 12px;
-      display: inline-block;
-      box-shadow: 0 0 10px rgba(157, 77, 237, 0.7);
-    }
-
     .profile-section {
       display: flex;
       align-items: center;
@@ -101,8 +89,8 @@
     }
 
     .profile-section img {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid var(--color-accent-blue);
@@ -115,6 +103,15 @@
       transform: scale(1.05);
     }
 
+    .speaker-tag {
+      font-family: var(--font-mono);
+      margin-top: 10px;
+      text-align: center;
+      color: var(--color-accent-purple);
+      font-size: 0.85em;
+      opacity: 0.8;
+    }
+
     h3 {
       font-family: var(--font-mono);
       color: var(--color-accent-blue);
@@ -123,8 +120,17 @@
       letter-spacing: 1px;
     }
 
-    p strong {
+    .intro-text strong {
       color: var(--color-accent-purple);
+    }
+
+    .portfolio-link {
+      margin-top: 8px;
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.9em;
+      color: var(--color-accent-blue);
+      text-decoration: underline;
     }
 
     .outline-section {
@@ -232,55 +238,60 @@
       font-family: var(--font-mono);
     }
 
-    /* ✅ MOBILE OPTIMIZATION */
     @media (max-width: 600px) {
       .container {
         padding: 20px;
       }
 
-      h1 {
-        font-size: 1.8em;
-      }
-
       .profile-section {
         flex-direction: column;
         text-align: center;
-        padding: 20px;
-      }
-
-      .profile-section img {
-        width: 100px;
-        height: 100px;
       }
 
       .outline-section ul {
         grid-template-columns: 1fr;
       }
-
-      .utility-section {
-        flex-direction: column;
-      }
     }
   </style>
 </head>
+
 <body>
 
   <div class="container">
     <header>
       <h1>AGENTIC AI WITH CLINE</h1>
       <h2>Multi-File AI Collaboration in Visual Studio Code</h2>
-      <div class="speaker-badge">SPEAKER: Muhammad Danish  </div>
-     
     </header>
 
+    <!-- UPDATED PROFILE SECTION -->
     <div class="profile-section">
-      <img src="images/danish.jpg" alt="Speaker Photo">
-      
+      <div style="text-align:center;">
+        <img src="images/danish.jpg" alt="Speaker Photo">
+        <div class="speaker-tag">SPEAKER</div>
+      </div>
+
       <div>
-        <h3>Introduction</h3>
-        <p><strong>Agentic AI</strong> represents the next step in automation systems that can plan, reason, and execute tasks on their own. <strong>Cline</strong> integrates these capabilities directly inside <strong>VS Code</strong>, allowing developers to build, refactor, and test code using AI driven collaboration.</p>
+        <h3>Muhammad Danish</h3>
+        <p class="intro-text">
+          I am a <strong>developer, automation enthusiast, and AI workflow designer</strong>, passionate about creating smart systems that enhance human productivity.  
+        </p>
+
+
+        <!-- Portfolio link area -->
+        <a class="portfolio-link" href="https://my-portfolio-website-ochre-eight.vercel.app/" target="_blank">➤ View My Portfolio</a>
       </div>
     </div>
+
+    <h3 style="margin-top:20px;">My Role in the Seminar</h3>
+    <p class="intro-text">
+      In this seminar, I serve as the <strong>lead presenter</strong>, demonstrating how Agentic AI and Cline can transform the way developers write, manage, and ship code.
+      My focus is on helping students and professionals understand practical AI-assisted development and modern automation workflows.
+    </p>
+
+
+
+
+    <!-- Everything below remains unchanged -->
 
     <div class="outline-section">
       <h3> Installation & Workflow </h3>
@@ -297,13 +308,13 @@
       <ul>
         <li><strong>Plan Mode:</strong> Cline explains its actions before making any code change.</li>
         <li><strong>Act Mode:</strong> Automatically performs tasks like editing or creating files.</li>
-        <li><strong>API Setup:</strong> Works securely with APIs such as OpenAI, Anthropic, and OpenRouter for model access.</li>
+        <li><strong>API Setup:</strong> Works securely with APIs such as OpenAI, Anthropic, and OpenRouter.</li>
       </ul>
     </div>
 
     <div class="outline-section">
       <h3> Summary </h3>
-      <p><strong>Cline</strong> transforms Visual Studio Code into a truly intelligent development partner. It enables developers to collaborate with AI that understands entire projects, improving speed, precision, and creativity.<br><br>With Agentic AI, programming becomes a shared process between human and machine  smarter, faster, and future-ready.</p>
+      <p><strong>Cline</strong> transforms Visual Studio Code into an intelligent development partner, enabling a faster, smarter, and more collaborative approach to coding.</p>
     </div>
 
     <div class="utility-section">
@@ -314,15 +325,16 @@
       </div>
       <div class="utility-block social">
         <p>CONNECT_PROFILE</p>
-        <a href="https://www.linkedin.com/in/muhammad-danish-0b3727376?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/muhammad-danish-0b3727376">LinkedIn</a>
         <a href="https://github.com/danishcorder">GitHub</a>
         <a href="https://www.facebook.com/profile.php?id=61551805148698">Facebook</a>
       </div>
     </div>
 
     <footer>
-      TERMINAL_OUTPUT: SESSION_COMPLETE. © 2025 Muhammad Danish  ALLAH HAFIZ 
+      TERMINAL_OUTPUT: SESSION_COMPLETE. © 2025 Muhammad Danish — ALLAH HAFIZ
     </footer>
+
   </div>
 
 </body>
